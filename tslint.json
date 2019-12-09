@@ -1,0 +1,45 @@
+{
+  "extends": ["tslint:recommended", "tslint-react", "tslint:latest", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["node_modules"]
+  },
+  "rules": {
+    "max-line-length": [true, 120],
+    "indent": [true, "spaces", 2],
+    "no-trailing-whitespace": true,
+    "object-literal-sort-keys": false,
+    "interface-name": [true, "never-prefix"],
+    "object-literal-shorthand": true,
+    "interface-over-type-literal": true,
+    "no-console": [true, "log"],
+    "ordered-imports": [
+      true,
+      {
+        // FIXME tslint & typescript up to date, but 'grouped-imports' doesn't work
+        "grouped-imports": true,
+        "import-sources-order": "any",
+        "named-imports-order": "any",
+        "module-source-path": "full"
+      }
+    ],
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": false,
+    "no-unnecessary-initializer": true,
+    "no-empty-interface": true,
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-pascal-case",
+      "allow-leading-underscore"
+    ],
+    "member-ordering": false,
+    "semicolon": false,
+    "array-type": [true, "array"],
+    "jsx-boolean-value": "always",
+    "no-var-requires": false,
+    "jsx-no-lambda": false
+    // TODO disable 'any' when we figure out how to type variables in styled components
+    //    "no-any": true
+  }
+}
